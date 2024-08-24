@@ -28,22 +28,41 @@ namespace CalcQuiz
                 timer1.Stop();
                 startButton.Enabled = true;
                 MessageBox.Show("You got all the answers right!", "Congratulations!");
+                timeLabel.BackColor = Color.White;
+            }
+            else if (timeLeft > 6)
+            {
+                timeLeft--;
+                timeLabel.Text = timeLeft + " seconds";
             }
             else if (timeLeft > 0)
             {
                 timeLeft--;
                 timeLabel.Text = timeLeft + " seconds";
+                timeLabel.BackColor = Color.Red;
             }
             else
             {
                 timer1.Stop();
                 timeLabel.Text = "Time's up!";
                 MessageBox.Show("You did't finish in time", "Sorry!");
+                timeLabel.BackColor = Color.White;
                 sum.Value = addend1 + addend2;
                 difference.Value = minuend - substrahend;
                 product.Value = multiplicand * multiplier;
                 quotient.Value = dividend / divisor;
                 startButton.Enabled = true;
+            }
+        }
+
+        private void answer_Enter(object sender, EventArgs e)
+        {
+            // Select the whole answer in the NumericUpDown control.
+            NumericUpDown answerBox = sender as NumericUpDown;
+            if (answerBox != null)
+            {
+                int lengthOfAnswer = answerBox.Value.ToString().Length;
+                answerBox.Select(0, lengthOfAnswer);
             }
         }
 
