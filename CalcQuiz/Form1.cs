@@ -14,11 +14,37 @@ namespace CalcQuiz
     {
         Random randomizer = new Random();
         int addend1, addend2, minuend, substrahend, multiplicand, multiplier, divisor, dividend;
-
+        int timeLeft;
         private void startButton_Click(object sender, EventArgs e)
         {
             StartTheQuiz();
             startButton.Enabled = false;
+        }
+
+        private void timer1_Tick(object sender, EventArgs e)
+        {
+            if (CheckTheAnswer())
+            {
+                timer1.Stop();
+                startButton.Enabled = true;
+                MessageBox.Show("You got all the answers right!", "Congratulations!");
+            }
+            else if (timeLeft > 0)
+            {
+                timeLeft--;
+                timeLabel.Text = timeLeft + " seconds";
+            }
+            else
+            {
+                timer1.Stop();
+                timeLabel.Text = "Time's up!";
+                MessageBox.Show("You did't finish in time", "Sorry!");
+                sum.Value = addend1 + addend2;
+                difference.Value = minuend - substrahend;
+                product.Value = multiplicand * multiplier;
+                quotient.Value = dividend / divisor;
+                startButton.Enabled = true;
+            }
         }
 
         public Form1()
@@ -31,6 +57,22 @@ namespace CalcQuiz
             MinusQuiz();
             MultiplicandQuiz();
             DivisionQuiz();
+            // Start the timer
+            timeLeft = 30;
+            timeLabel.Text = "30 seconds";
+            timer1.Start();
+        }
+        private bool CheckTheAnswer()
+        {
+            if ((addend1 + addend2 == sum.Value) && (minuend - substrahend == difference.Value)
+                && (multiplicand * multiplier == product.Value) && (dividend / divisor == quotient.Value))
+            {
+                return true;
+            }
+            else
+            {
+                return false;
+            }
         }
         public void SumQuiz()
         {
