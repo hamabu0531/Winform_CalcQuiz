@@ -12,9 +12,69 @@ namespace CalcQuiz
 {
     public partial class Form1 : Form
     {
+        Random randomizer = new Random();
+        int addend1, addend2, minuend, substrahend, multiplicand, multiplier, divisor, dividend;
+
+        private void startButton_Click(object sender, EventArgs e)
+        {
+            StartTheQuiz();
+            startButton.Enabled = false;
+        }
+
         public Form1()
         {
             InitializeComponent();
+        }
+        public void StartTheQuiz()
+        {
+            SumQuiz();
+            MinusQuiz();
+            MultiplicandQuiz();
+            DivisionQuiz();
+        }
+        public void SumQuiz()
+        {
+            // Fill in the addition problem.
+            // Generate two random numbers to add.
+            // Store the values in the variables 'addend1' and 'addend2'.
+            addend1 = randomizer.Next(51);
+            addend2 = randomizer.Next(51);
+
+            // Convert the two randomly generated numbers
+            // into strings so that they can be displayed
+            // in the label controls.
+            plusLeftLabel.Text = addend1.ToString();
+            plusRightLabel.Text = addend2.ToString();
+
+            // 'sum' is the name of the NumericUpDown control.
+            // This step makes sure its value is zero before
+            // adding any values to it.
+            sum.Value = 0;
+        }
+        public void MinusQuiz()
+        {
+            minuend = randomizer.Next(1, 101);
+            substrahend = randomizer.Next(1, minuend);
+            minusLeftLabel.Text = minuend.ToString();
+            minusRightLabel.Text = substrahend.ToString();
+            difference.Value = 0;
+        }
+        public void MultiplicandQuiz()
+        {
+            multiplicand = randomizer.Next(2, 11);
+            multiplier = randomizer.Next(2, 11);
+            timesLeftLabel.Text = multiplicand.ToString();
+            timesRightLabel.Text = multiplier.ToString();
+            product.Value = 0;
+        }
+        public void DivisionQuiz()
+        {
+            divisor = randomizer.Next(2, 11);
+            int temporaryQuotient = randomizer.Next(2, 11);
+            dividend = divisor * temporaryQuotient;
+            dividedLeftLabel.Text = dividend.ToString();
+            dividedRightLabel.Text = divisor.ToString();
+            quotient.Value = 0;
         }
     }
 }

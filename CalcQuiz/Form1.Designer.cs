@@ -47,9 +47,9 @@
             this.timesLeftLabel = new System.Windows.Forms.Label();
             this.quotient = new System.Windows.Forms.NumericUpDown();
             this.label13 = new System.Windows.Forms.Label();
-            this.devidedRightLabel = new System.Windows.Forms.Label();
+            this.dividedRightLabel = new System.Windows.Forms.Label();
             this.label15 = new System.Windows.Forms.Label();
-            this.devidedLeftLabel = new System.Windows.Forms.Label();
+            this.dividedLeftLabel = new System.Windows.Forms.Label();
             this.startButton = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.sum)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.difference)).BeginInit();
@@ -238,15 +238,15 @@
             this.label13.Text = "÷";
             this.label13.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
-            // devidedRightLabel
+            // dividedRightLabel
             // 
-            this.devidedRightLabel.Font = new System.Drawing.Font("MS UI Gothic", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
-            this.devidedRightLabel.Location = new System.Drawing.Point(184, 238);
-            this.devidedRightLabel.Name = "devidedRightLabel";
-            this.devidedRightLabel.Size = new System.Drawing.Size(60, 50);
-            this.devidedRightLabel.TabIndex = 19;
-            this.devidedRightLabel.Text = "?";
-            this.devidedRightLabel.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.dividedRightLabel.Font = new System.Drawing.Font("MS UI Gothic", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
+            this.dividedRightLabel.Location = new System.Drawing.Point(184, 238);
+            this.dividedRightLabel.Name = "dividedRightLabel";
+            this.dividedRightLabel.Size = new System.Drawing.Size(60, 50);
+            this.dividedRightLabel.TabIndex = 19;
+            this.dividedRightLabel.Text = "?";
+            this.dividedRightLabel.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // label15
             // 
@@ -258,15 +258,15 @@
             this.label15.Text = "=";
             this.label15.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
-            // devidedLeftLabel
+            // dividedLeftLabel
             // 
-            this.devidedLeftLabel.Font = new System.Drawing.Font("MS UI Gothic", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
-            this.devidedLeftLabel.Location = new System.Drawing.Point(52, 238);
-            this.devidedLeftLabel.Name = "devidedLeftLabel";
-            this.devidedLeftLabel.Size = new System.Drawing.Size(60, 50);
-            this.devidedLeftLabel.TabIndex = 17;
-            this.devidedLeftLabel.Text = "?";
-            this.devidedLeftLabel.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.dividedLeftLabel.Font = new System.Drawing.Font("MS UI Gothic", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
+            this.dividedLeftLabel.Location = new System.Drawing.Point(52, 238);
+            this.dividedLeftLabel.Name = "dividedLeftLabel";
+            this.dividedLeftLabel.Size = new System.Drawing.Size(60, 50);
+            this.dividedLeftLabel.TabIndex = 17;
+            this.dividedLeftLabel.Text = "?";
+            this.dividedLeftLabel.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // startButton
             // 
@@ -278,6 +278,7 @@
             this.startButton.TabIndex = 0;
             this.startButton.Text = "Start the quiz";
             this.startButton.UseVisualStyleBackColor = true;
+            this.startButton.Click += new System.EventHandler(this.startButton_Click);
             // 
             // Form1
             // 
@@ -287,9 +288,9 @@
             this.Controls.Add(this.startButton);
             this.Controls.Add(this.quotient);
             this.Controls.Add(this.label13);
-            this.Controls.Add(this.devidedRightLabel);
+            this.Controls.Add(this.dividedRightLabel);
             this.Controls.Add(this.label15);
-            this.Controls.Add(this.devidedLeftLabel);
+            this.Controls.Add(this.dividedLeftLabel);
             this.Controls.Add(this.product);
             this.Controls.Add(this.label9);
             this.Controls.Add(this.timesRightLabel);
@@ -341,9 +342,9 @@
         private System.Windows.Forms.Label timesLeftLabel;
         private System.Windows.Forms.NumericUpDown quotient;
         private System.Windows.Forms.Label label13;
-        private System.Windows.Forms.Label devidedRightLabel;
+        private System.Windows.Forms.Label dividedRightLabel;
         private System.Windows.Forms.Label label15;
-        private System.Windows.Forms.Label devidedLeftLabel;
+        private System.Windows.Forms.Label dividedLeftLabel;
         private System.Windows.Forms.Button startButton;
     }
 }
