@@ -1,0 +1,10 @@
+C:\Users\hamab\c#\windowsform\CalcQuiz\CalcQuiz\bin\Debug\CalcQuiz.exe.config
+C:\Users\hamab\c#\windowsform\CalcQuiz\CalcQuiz\bin\Debug\CalcQuiz.exe
+C:\Users\hamab\c#\windowsform\CalcQuiz\CalcQuiz\bin\Debug\CalcQuiz.pdb
+C:\Users\hamab\c#\windowsform\CalcQuiz\CalcQuiz\obj\Debug\CalcQuiz.csproj.AssemblyReference.cache
+C:\Users\hamab\c#\windowsform\CalcQuiz\CalcQuiz\obj\Debug\CalcQuiz.Form1.resources
+C:\Users\hamab\c#\windowsform\CalcQuiz\CalcQuiz\obj\Debug\CalcQuiz.Properties.Resources.resources
+C:\Users\hamab\c#\windowsform\CalcQuiz\CalcQuiz\obj\Debug\CalcQuiz.csproj.GenerateResource.cache
+C:\Users\hamab\c#\windowsform\CalcQuiz\CalcQuiz\obj\Debug\CalcQuiz.csproj.CoreCompileInputs.cache
+C:\Users\hamab\c#\windowsform\CalcQuiz\CalcQuiz\obj\Debug\CalcQuiz.exe
+C:\Users\hamab\c#\windowsform\CalcQuiz\CalcQuiz\obj\Debug\CalcQuiz.pdb
